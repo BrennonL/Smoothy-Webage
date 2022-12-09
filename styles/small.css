@@ -19,7 +19,7 @@ header div img{
 header div ul li{
     list-style: none;
     color: white;
-    border-bottom: 2px black solid ;
+    border-bottom: 2px #090302  solid ;
 }
 
 header div ul li a{
@@ -28,11 +28,19 @@ header div ul li a{
 }
 
 header div ul li:hover{
-    background-color: black;
+    background-color: #090302 ;
+}
+
+header div ul li{
+    margin-top: none;
+    padding-top: .25rem;
 }
 
 /* -------------------------MAIN------------------------- */
 
+main{
+    background-color: #8A7E72;
+}
 
 /* -------------------------FOOTER------------------------- */
 footer{
