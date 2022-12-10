@@ -57,6 +57,19 @@ main{
     background-color: #8A7E72;
 }
 
+main#main picture img{
+    margin-top: 1.5rem;
+    margin-left: .5rem;
+    border: solid 3px black;
+    box-shadow: 5px 5px 5px;
+}
+
+/* main#main div{
+    background-color: white;
+    border: black solid 3px;
+    box-shadow: 5px 5px 5px;
+} */
+
 /* -------------------------FOOTER------------------------- */
 footer{
     background-color: #5A2328;
