@@ -1,12 +1,14 @@
 @media only screen and (min-width: 64rem) {
     /* -------------------------HEADER------------------------- */
-    header div ul{
+    header nav ul#navagation{
         display: flex;
         flex-direction: row;
         text-align: right;
+        justify-content: flex-end;
+
     }
 
-    header div ul li{
+    header nav ul li{
         padding-left: 2.5rem;
         padding-right: 2.5rem;
         border-right: 2px solid #090302 ;
@@ -14,7 +16,7 @@
     }
 
 
-    header div img {
+    header nav img {
         max-width: 100px;
         max-height: 100px;
     }
@@ -36,6 +38,10 @@
 
     footer div{
         padding-left: 20px;
+    }
+
+    #hamburgerBtn{
+        display: none;
     }
 
 }

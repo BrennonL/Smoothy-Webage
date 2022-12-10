@@ -6,34 +6,49 @@ body{
 
 /* -------------------------HEADER------------------------- */
 
-header div{
+header nav{
     background-color: #5A2328;
     display: flex;
     flex-direction: row;
 }
 
-header div img{
-    width: 250px;
+header nav img{
+    width: 150px;
+    height: 150px;
 }
 
-header div ul li{
+header nav ul li{
     list-style: none;
     color: white;
     border-bottom: 2px #090302  solid ;
 }
 
-header div ul li a{
+header nav ul li a{
     color: white;
     text-decoration: none;
 }
 
-header div ul li:hover{
+header nav ul li:hover{
     background-color: #090302 ;
 }
 
-header div ul li{
+
+header nav ul li{
     margin-top: none;
     padding-top: .25rem;
+}
+
+header nav ul {display: none;}
+header nav ul.open{display: block;}
+
+#hamburgerBtn span:nth-child(1){display: block;}
+#hamburgerBtn span:nth-child(2){display: none;}
+
+#hamburgerBtn.open span:nth-child(1){display: none;}
+#hamburgerBtn.open span:nth-child(2){display: block;}
+
+#hamburgerBtn{
+    max-height: 25px;
 }
 
 /* -------------------------MAIN------------------------- */
