@@ -64,11 +64,44 @@ main#main picture img{
     box-shadow: 5px 5px 5px;
 }
 
-/* main#main div{
+main#main div{
     background-color: white;
     border: black solid 3px;
     box-shadow: 5px 5px 5px;
-} */
+    border-radius: 10px;
+}
+
+main#main div div#Weathericon{
+    border: none;
+    box-shadow: none;
+}
+
+main#main{
+    display: grid;
+}
+
+main#main div{
+    margin: .25rem;
+}
+
+main#main picture{
+    margin: auto;
+}
+
+/* upcoming holidays */
+main#main div:nth-child(5){
+    display: none;
+}
+
+
+main#main picture:nth-child(7){
+    display: none;
+}
+
+main div h1, main div h2, main div h3, main div h4, main div h5, main div h6{
+    color: #0B3C49;
+    border-bottom: #0B3C49 dotted 2px;
+}
 
 /* -------------------------FOOTER------------------------- */
 footer{
