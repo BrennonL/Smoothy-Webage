@@ -62,6 +62,7 @@ main#main picture img{
     margin-left: .5rem;
     border: solid 3px black;
     box-shadow: 5px 5px 5px;
+    width: 95%;
 }
 
 main#main div{
@@ -98,6 +99,15 @@ main#main picture:nth-child(7){
     display: none;
 }
 
+picture img[data-src]{
+    filter: blur(0.2rem);
+}
+
+picture img {
+    filter: blur(0em);
+    transition: filter 0.5s;
+}
+
 main div h1, main div h2, main div h3, main div h4, main div h5, main div h6{
     color: #0B3C49;
     border-bottom: #0B3C49 dotted 2px;
@@ -123,6 +133,7 @@ footer img{
 .logo_images{
     max-width: 50px;
     display: block;
+    margin-left: .5rem;
 }
 
 footer a{
@@ -130,3 +141,30 @@ footer a{
 }
 
 
+
+
+/* ------------------------------------------------- Fresh Page------------------------------------------------- */
+
+form label.top, form div{
+    display: block;
+    padding-top: 1rem;
+    font-size: .8rem;
+}
+
+
+form label.top input, form label.top select{
+    -webkit-appearance: none;
+    display: block;
+    font-size: 1rem;
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: .75rem
+}
+
+form label.top input:required{
+    border-left: red solid 6px;
+} 
+
+form label.top input:required{
+    border-left: green solid 6px;
+}

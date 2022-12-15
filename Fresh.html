@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles/small.css">
+        <link rel="stylesheet" href="./styles/medium.css">
+        <link rel="stylesheet" href="./styles/large.css">
+        <link rel="stylesheet" href="./styles/Normalize.css">
+        <link rel="shortcut icon" href="icon.ico">
+    </head>
+
+
+
+    <body>
+        <header>
+            <h1>Bountiful Foods</h1>
+            <nav>
+                <img id="logo" src="./images/Lawn Artists-logos_transparent.png" alt="logo">
+                <button id="hamburgerBtn"><span>&#9776</span><span>X</span></button>
+                <ul id="navagation">
+                    <li><a href="index.html"><h3>Home</h3></a></li>
+                    <li><a href="Fresh.html"><h3>Fresh</h3></a></li>
+                    <li><a href="about_us.html"><h3>About Us</h3></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+
+            <form method="get" action="thankyou.html" name="fruit_form">
+                <fieldset>
+                    <legend>Information</legend>
+                    <label class="top">First Name*<input id="fname" type="text" name="fname" required></label>
+                    <label class="top">Last Name*<input id="lname" type="text" name="lname" required></label>
+                    <label class="top">Email*<input id="email" type="email" name="email" placeholder="someone@email.com" required></label>
+                    <label class="top">Phone Number<input id="phone" type="tel" name="phone_number" required></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Date and time</legend>
+                    <p>This is selecting a date and time that we can deliver your smoothy.</p>
+                    <label class="top">Date<input id="date" type="date" name="date" required></label>
+                    <div>
+                        <h3>Your Smoothy</h3>
+                        <p>Please select the three ingredients you want in your smoothy</p>
+                        <div id="checkbox">
+                            
+                        </div>
+                        <select name="fruits1" id="fruits1"></select>
+                        <select name="fruits2" id="fruits2"></select>
+                        <select name="fruits3" id="fruits3"></select>
+                    </div>
+
+                    <h3>Extra Comments</h3>
+                    <textarea id="specialcontent" rows="4"></textarea>
+                </fieldset>
+                <input type="button" value="Save Ingredients" class="submitBtn" onclick="DisplayNutritionValue()">
+            </form>
+
+            <div id="output"></div>
+
+        </main>
+        <footer>
+            <img class="logo" src = "Images/Lawn Artists-logos_transparent.png" alt = "Company Logo">
+            <div>
+                <h3>The River that Splits the City</h3>
+                <p>Brennon Laney - brennon.laney@gmail.com - WDD 230 project
+                </p>
+                <p><a href="recourceattribution.html">Resource Attribution Page</a></p>
+            </div>
+            <div>
+                <h3>Contact us:</h3>
+                <p>Number: (888)-888-8888</p>
+                <p>Email: BountifulFoods@gmail.com</p>
+                <p><a href="https://www.google.com/maps/place/18246+RM+1431,+Jonestown,+TX+78645/@30.5089975,-97.9156236,17z/data=!3m1!4b1!4m5!3m4!1s0x865b2e52fd8e9f67:0xb8b1958b29c907bf!8m2!3d30.5089929!4d-97.9134349">Location</a></p>
+                <div>
+                    <a href="facebook.com"><img class="logo_images" src="./images/facebook.jpg" alt="Facebook logo"></a>
+                    <a href="linkedin.com"><img class="logo_images" src="./images/linkedin.jpg" alt="Linkedin Logo"></a>
+                    <a href="instagram.com"><img class="logo_images" src="./images/Instagram_logo_2016.svg.png" alt="Instagram Logo"></a>
+                </div>
+            </div>
+            <div>
+                <p id="timesvisited"></p>
+            </div>
+        </footer>
+        <script src="./scripts/responciveNav.js"></script>
+        <script src="./scripts/timesVisited.js"></script>
+        <script src="./scripts/displayfruits.js"></script>
+    </body>
+</html>
