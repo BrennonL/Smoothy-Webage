@@ -1,17 +1,4 @@
-const visitsDisplay = document.querySelector("#timesvisited");
 
-let numVisits = Number(localStorage.getItem('visits-ls'));
 
-if (numVisits != 0)
-{
-    visitsDisplay.textContent = `Number of Visits: ${numVisits}`;
-}
-
-else
-{
-    visitsDisplay.textContent = `This is your first visit`;
-}
-
-numVisits ++;
-
-localStorage.setItem('visits-ls', numVisits)
+const date = new Date(document.lastModified);
+document.getElementById('timesvisited').innerHTML = "Date of modification on "+'<br/>'+date.getDate()+"-"+date.getMonth()+"-"+date.getFullYear()+" at time : "+date.getHours()+" hours and "+date.getMinutes()+" minutes";

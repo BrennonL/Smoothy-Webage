@@ -40,14 +40,17 @@ fetch('https://brotherblazzard.github.io/canvas-content/fruit.json')
 
 
 
-
-
-async function DisplayNutritionValue()
-{
+    let drinknum = Number(localStorage.getItem("drinks-ls"));
+    
+    async function DisplayNutritionValue()
+    {
+        drinknum ++;
+        localStorage.setItem("drinks-ls", drinknum);
     try{
+
         const response = await fetch('https://brotherblazzard.github.io/canvas-content/fruit.json');
         if(response.ok){
-
+            
             const data = await response.json();
 
             let fname = document.getElementById("fname");
@@ -62,6 +65,41 @@ async function DisplayNutritionValue()
 
             let thankyouform = document.getElementById("output");
 
+
+            let totalCarbs = 0;
+            let totalProtein = 0;
+            let totalFat = 0;
+            let totalCal = 0;
+            let totalSugar = 0;
+
+            data.forEach(fruit => {
+                if (fruit.name == fruit1.value)
+                {  
+                    totalCarbs = totalCarbs + fruit.nutritions.carbohydrates;
+                    totalProtein = totalProtein + fruit.nutritions.protein;
+                    totalFat = totalFat + fruit.nutritions.fat;
+                    totalCal = totalCal + fruit.nutritions.calories;
+                    totalSugar = totalSugar + fruit.nutritions.sugar;
+                }
+                if (fruit.name == fruit2.value)
+                {
+                    totalCarbs = totalCarbs + fruit.nutritions.carbohydrates;
+                    totalProtein = totalProtein + fruit.nutritions.protein;
+                    totalFat = totalFat + fruit.nutritions.fat;
+                    totalCal = totalCal + fruit.nutritions.calories;
+                    totalSugar = totalSugar + fruit.nutritions.sugar;
+                }
+                if (fruit.name == fruit3.value)
+                {
+                    totalCarbs = totalCarbs + fruit.nutritions.carbohydrates;
+                    totalProtein = totalProtein + fruit.nutritions.protein;
+                    totalFat = totalFat + fruit.nutritions.fat;
+                    totalCal = totalCal + fruit.nutritions.calories;
+                    totalSugar = totalSugar + fruit.nutritions.sugar;
+                }
+                
+            });
+
             console.log(fname.value)
             text = `
             <h2>Thank you!</h2>
@@ -71,7 +109,15 @@ async function DisplayNutritionValue()
             <p>Email: ${email.value}</p>
             <p>Date: ${date.value}</p>
             <p>Fruits used: ${fruit1.value}, ${fruit2.value}, and ${fruit3.value}</p>
-            <p>Special instructions: ${specialcontent.value}</p>`
+            <p>Special instructions: ${specialcontent.value}</p>
+            <p>Total nutrients</p>
+            <ul>
+                <li>Carbs: ${totalCarbs}</li>
+                <li>Protein: ${totalProtein}</li>
+                <li>Fat: ${totalFat}</li>
+                <li>Calories: ${totalCal}</li>
+                <li>Sugar: ${totalSugar}</li>
+            </ul>`
 
             thankyouform.innerHTML = text;
         }
@@ -89,3 +135,8 @@ async function DisplayNutritionValue()
 
     
 }
+
+
+
+
+

@@ -168,3 +168,12 @@ form label.top input:required{
 form label.top input:required{
     border-left: green solid 6px;
 }
+
+h1{
+    font-family: 'Wendy One', sans-serif;
+}
+
+h2, h3, h4, h5, h6{
+
+    font-family: 'Do Hyeon', sans-serif;
+}
